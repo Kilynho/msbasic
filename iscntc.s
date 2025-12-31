@@ -2,7 +2,7 @@
 ; ----------------------------------------------------------------------------
 ; SEE IF CONTROL-C TYPED
 ; ----------------------------------------------------------------------------
-.ifndef CONFIG_CBM_ALL
+.ifdef CONFIG_CBM_ALL
 .include "cbm_iscntc.s"
 .endif
 .ifdef KBD
@@ -25,5 +25,8 @@
 .endif
 .ifdef SYM1
 .include "sym1_iscntc.s"
+.endif
+.ifdef KILYNHO
+.include "kilynho_iscntc.s"
 .endif
 ;!!! runs into "STOP"
